@@ -2,6 +2,115 @@ body {
   background-color: green;
 }
 
+
+.pokeballs {
+  display:inline-block;
+  padding: 20px;
+  margin-left: 2%;
+}
+.pokeballs > img {
+  width: 250px;
+  height: 250px;
+}
+
+/* //////////////////Bulbasaur Modal/////////////////////////// */
+
+#bulbaModal {
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  width: 475px;
+  height: 525px;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#bulbaModalText {
+  background-color: ghostwhite;
+  text-align: center;
+  margin: auto;
+  margin-top: 25px;
+  padding: 20px 0;
+  width: 400px;
+  height: 425px;
+	border: 3px solid black;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#bulbaInfo {
+  width: 100%;
+}
+
+#closeBulbaModal {
+  text-decoration: none;
+  color: #c7a008;
+  font-weight: bold;
+}
+
+#chooseBulba {
+  color: #2a75bb;
+  background-color: #ffcb05;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 55%;
+  margin-bottom: 10px;
+  width: 35%;
+}
+
+
+
+/* //////////////////Squirtle Modal/////////////////////////// */
+
+#charModal {
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  width: 525px;
+  height: 575px;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#charModalText {
+	background-color: ghostwhite;
+  text-align: center;
+  margin: auto;
+  margin-top: 25px;
+  padding: 20px 0;
+  width: 400px;
+  height: 475px;
+	border: 3px solid black;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#charInfo {
+  width: 100%;
+}
+
+#closeCharModal {
+  text-decoration: none;
+  color: #c7a008;
+  font-weight: bold;
+}
+
+#chooseChar {
+  color: #2a75bb;
+  background-color: #ffcb05;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 55%;
+  margin-bottom: 10px;
+  width: 35%;
+}
+
+
+
+/* //////////////////Squirtle Modal/////////////////////////// */
+
 #squirtModal {
   background-color: rgba(0,0,0,0.3);
   position: fixed;
@@ -24,6 +133,34 @@ body {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+#squirtInfo {
+  width: 100%;
+}
+
+#closeSquirtModal {
+  text-decoration: none;
+  color: #c7a008;
+  font-weight: bold;
+}
+
+#chooseSquirt {
+  color: #2a75bb;
+  background-color: #ffcb05;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 55%;
+  margin-bottom: 10px;
+  width: 35%;
+}
+
+
+td, tr {
+  padding: 0 8px;
+}
+
+
 .closeBtn {
   background-color: #3c5aa6;
   border: 1px solid black;
@@ -34,7 +171,7 @@ body {
   width: 20%;
 }
 
-#closeSquirtModal {
-  text-decoration: none;
-  color: ghostwhite;
+.pokeImg {
+  width: 250px;
+  height: 250px;
 }

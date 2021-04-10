@@ -2,6 +2,7 @@ $(() => {
 
   // const helloThere = alert('You\'re finally ready to start your Pokemon journey! Let\'s go see Professor Oak to get started!')
 
+  ////////////////Bulbasaur Modal////////////////////
 
   $.ajax({
 
@@ -12,6 +13,18 @@ $(() => {
 
     console.log(data)
 
+    for (let i = 0; i < 2; i++) {
+      const randomMove1 = Math.floor(Math.random() * data.moves.length)
+      $('#bulbaMove1').html(data.moves[randomMove1].move.name)
+      const randomMove2 = Math.floor(Math.random() * data.moves.length)
+      $('#bulbaMove2').html(data.moves[randomMove2].move.name)
+    }
+    $('#bulbaName').html(data.name)
+    $('#bulbaId').html(data.id)
+    $('#bulbaTypes').html(data.types[0].type.name)
+    $('#bulbaWeight').html(data.weight)
+    $('#bulbaHeight').html(data.height)
+    
   },
 
     () => {
@@ -21,6 +34,84 @@ $(() => {
     }
   )
 
+
+  const $bulbaModal = $('<div>').attr('id', 'bulbaModal')
+  $('.container').append($bulbaModal)
+  const $bulbaModalText = $('<div>').attr('id', 'bulbaModalText')
+  $bulbaModal.append($bulbaModalText)
+
+  const $bulbaCloseBtn = $('<div>').addClass('closeBtn')
+  $bulbaModalText.append($bulbaCloseBtn)
+  const $closeBulbaModal = $('<a>').attr('href', '#').attr('id', 'closeBulbaModal').text('CLOSE')
+  $bulbaCloseBtn.append($closeBulbaModal)
+
+  const $bulbaImg = $('<img>').attr('src', 'https://i.imgur.com/igGCQRq.png').addClass('pokeImg')
+  $bulbaModalText.append($bulbaImg)
+
+  const $bulbaInfo = $('<table>').attr('id', 'bulbaInfo')
+  $bulbaModalText.append($bulbaInfo)
+
+  const $bulbaRow1 = $('<tr>')
+  $bulbaInfo.append($bulbaRow1)
+
+  const $bulba1 = $('<th>').text('MOVES')
+  $bulbaRow1.append($bulba1)
+  const $bulba2 = $('<th>').text('NAME')
+  $bulbaRow1.append($bulba2)
+  const $bulba3 = $('<th>').text('TYPE')
+  $bulbaRow1.append($bulba3)
+  const $bulba4 = $('<th>').text('WEIGHT')
+  $bulbaRow1.append($bulba4)
+  const $bulba5 = $('<th>').text('HEIGHT')
+  $bulbaRow1.append($bulba5)
+  const $bulba6 = $('<th>').text('ID')
+  $bulbaRow1.append($bulba6)
+
+  const $bulbaRow2 = $('<tr>')
+  $bulbaInfo.append($bulbaRow2)
+
+  const $bulbaMove1 = $('<td>').attr('id', 'bulbaMove1')
+  $bulbaRow2.append($bulbaMove1)
+  const $bulbaName = $('<td>').attr('id', 'bulbaName')
+  $bulbaRow2.append($bulbaName)
+  const $bulbaTypes = $('<td>').attr('id', 'bulbaTypes')
+  $bulbaRow2.append($bulbaTypes)
+  const $bulbaWeight = $('<td>').attr('id', 'bulbaWeight')
+  $bulbaRow2.append($bulbaWeight)
+  const $bulbaHeight = $('<td>').attr('id', 'bulbaHeight')
+  $bulbaRow2.append($bulbaHeight)
+  const $bulbaId = $('<td>').attr('id', 'bulbaId')
+  $bulbaRow2.append($bulbaId)
+
+  const $bulbaRow3 = $('<tr>')
+  $bulbaInfo.append($bulbaRow3)
+
+  const $bulbaMove2 = $('<td>').attr('id', 'bulbaMove2')
+  $bulbaRow3.append($bulbaMove2)
+
+  const $chooseBulba = $('<button>').attr('id', 'chooseBulba').text('I CHOOSE YOU!')
+  $bulbaModalText.append($chooseBulba)
+
+
+
+  const $openModalBulba = $('#openBulbaModal')
+  const $modalBulba = $('#bulbaModal')
+  const $closeModalBulba = $('#closeBulbaModal')
+
+  const openBulbaModal = () => {
+    $modalBulba.css('display', 'block')
+  }
+
+  const closeBulbaModal = () => {
+    $modalBulba.css('display', 'none')
+  }
+
+  $openModalBulba.on('click', openBulbaModal)
+  $closeModalBulba.on('click', closeBulbaModal)
+
+
+
+  ////////////////Charmander Modal////////////////////
 
   $.ajax({
 
@@ -31,6 +122,18 @@ $(() => {
 
       console.log(data)
 
+      for (let i = 0; i < 2; i++) {
+        const randomMove1 = Math.floor(Math.random() * data.moves.length)
+        $('#charMove1').html(data.moves[randomMove1].move.name)
+        const randomMove2 = Math.floor(Math.random() * data.moves.length)
+        $('#charMove2').html(data.moves[randomMove2].move.name)
+      }
+      $('#charName').html(data.name)
+      $('#charId').html(data.id)
+      $('#charTypes').html(data.types[0].type.name)
+      $('#charWeight').html(data.weight)
+      $('#charHeight').html(data.height)
+
   },
 
     () => {
@@ -40,6 +143,84 @@ $(() => {
     }
   )
 
+
+  const $charModal = $('<div>').attr('id', 'charModal')
+  $('.container').append($charModal)
+  const $charModalText = $('<div>').attr('id', 'charModalText')
+  $charModal.append($charModalText)
+
+  const $charCloseBtn = $('<div>').addClass('closeBtn')
+  $charModalText.append($charCloseBtn)
+  const $closeCharModal = $('<a>').attr('href', '#').attr('id', 'closeCharModal').text('CLOSE')
+  $charCloseBtn.append($closeCharModal)
+
+  const $charImg = $('<img>').attr('src', 'https://i.imgur.com/DanoXt9.png').addClass('pokeImg')
+  $charModalText.append($charImg)
+
+  const $charInfo = $('<table>').attr('id', 'charInfo')
+  $charModalText.append($charInfo)
+
+  const $charRow1 = $('<tr>')
+  $charInfo.append($charRow1)
+
+  const $char1 = $('<th>').text('MOVES')
+  $charRow1.append($char1)
+  const $char2 = $('<th>').text('NAME')
+  $charRow1.append($char2)
+  const $char3 = $('<th>').text('TYPE')
+  $charRow1.append($char3)
+  const $char4 = $('<th>').text('WEIGHT')
+  $charRow1.append($char4)
+  const $char5 = $('<th>').text('HEIGHT')
+  $charRow1.append($char5)
+  const $char6 = $('<th>').text('ID')
+  $charRow1.append($char6)
+
+  const $charRow2 = $('<tr>')
+  $charInfo.append($charRow2)
+
+  const $charMove1 = $('<td>').attr('id', 'charMove1')
+  $charRow2.append($charMove1)
+  const $charName = $('<td>').attr('id', 'charName')
+  $charRow2.append($charName)
+  const $charTypes = $('<td>').attr('id', 'charTypes')
+  $charRow2.append($charTypes)
+  const $charWeight = $('<td>').attr('id', 'charWeight')
+  $charRow2.append($charWeight)
+  const $charHeight = $('<td>').attr('id', 'charHeight')
+  $charRow2.append($charHeight)
+  const $charId = $('<td>').attr('id', 'charId')
+  $charRow2.append($charId)
+
+  const $charRow3 = $('<tr>')
+  $charInfo.append($charRow3)
+
+  const $charMove2 = $('<td>').attr('id', 'charMove2')
+  $charRow3.append($charMove2)
+
+  const $chooseChar = $('<button>').attr('id', 'chooseChar').text('I CHOOSE YOU!')
+  $charModalText.append($chooseChar)
+
+
+
+  const $openModalChar = $('#openCharModal')
+  const $modalChar = $('#charModal')
+  const $closeModalChar = $('#closeCharModal')
+
+  const openCharModal = () => {
+    $modalChar.css('display', 'block')
+  }
+
+  const closeCharModal = () => {
+    $modalChar.css('display', 'none')
+  }
+
+  $openModalChar.on('click', openCharModal)
+  $closeModalChar.on('click', closeCharModal)
+
+
+
+  ////////////////Squirtle Modal////////////////////
 
   $.ajax({
 
@@ -71,7 +252,6 @@ $(() => {
 
     }
   )
-
 
 
   const $squirtModal = $('<div>').attr('id', 'squirtModal')
@@ -128,7 +308,7 @@ $(() => {
   const $squirtMove2 = $('<td>').attr('id', 'squirtMove2')
   $squirtRow3.append($squirtMove2)
 
-  const $chooseSquirt = $('<button>').attr('id', 'chooseSquirt').text('I Choose You!')
+  const $chooseSquirt = $('<button>').attr('id', 'chooseSquirt').text('I CHOOSE YOU!')
   $squirtModalText.append($chooseSquirt)
 
 
@@ -138,11 +318,11 @@ $(() => {
   const $closeModalSquirt = $('#closeSquirtModal')
 
   const openSquirtModal = () => {
-    $squirtModal.css('display', 'block')
+    $modalSquirt.css('display', 'block')
   }
 
   const closeSquirtModal = () => {
-    $squirtModal.css('display', 'none')
+    $modalSquirt.css('display', 'none')
   }
 
   $openModalSquirt.on('click', openSquirtModal)
