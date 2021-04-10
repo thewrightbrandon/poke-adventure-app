@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# poke-adventure-app
-Repository for my Pokémon Adventure Application
-=======
 # Pokemon Adventure App
 Start your own [Pokemon Adventure!](https://upbeat-clarke-71de29.netlify.app)
 
@@ -32,5 +28,3 @@ Start your own [Pokemon Adventure!](https://upbeat-clarke-71de29.netlify.app)
 
 ## Wireframes
 [Wireframe Sketches PDF](https://github.com/thewrightbrandon/poke-adventure-app/files/6290650/wire-frame-poke-app.pdf)
-
->>>>>>> c45c991ada630a990de680bfe7ab89697fdab8c9
