@@ -22,9 +22,6 @@ $(() => {
   )
 
 
-
-
-
   $.ajax({
 
     url: "https://pokeapi.co/api/v2/pokemon/charmander"
@@ -42,8 +39,6 @@ $(() => {
 
     }
   )
-
-
 
 
   $.ajax({
@@ -76,6 +71,8 @@ $(() => {
 
     }
   )
+
+
 
   const $squirtModal = $('<div>').attr('id', 'squirtModal')
   $('.container').append($squirtModal)
@@ -133,6 +130,7 @@ $(() => {
 
   const $chooseSquirt = $('<button>').attr('id', 'chooseSquirt').text('I Choose You!')
   $squirtModalText.append($chooseSquirt)
+
 
 
   const $openModalSquirt = $('#openSquirtModal')
