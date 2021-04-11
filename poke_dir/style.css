@@ -5,25 +5,79 @@ body {
   background-color: #3c5aa6;
 }
 
-.pokeballs {
-  display:inline-block;
-  padding: 20px;
-  margin-left: 20px;
+header {
+  text-align: center;
 }
-.pokeballs > img {
-  width: 250px;
-  height: 250px;
+
+
+
+/* //////////////////Oak Dib and Tool Tip/////////////////////////// */
+
+.oakDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5%;
 }
+
+.toolTip {
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+}
+
+.toolTipText {
+  text-align: left;
+  visibility: hidden;
+  background-color: ghostwhite;
+  color: #3c5aa6;
+  margin-top: 2%;
+  padding: 2% 5%;
+  z-index: 1;
+  border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.toolTip:hover .toolTipText {
+  visibility: visible;
+}
+
+#talkText {
+
+}
+
+#talkText:hover {
+  opacity: .5;
+}
+
+
+
+/* //////////////////About Div/////////////////////////// */
+
+.aboutPokemon {
+  text-align: center;
+  margin: 10%;
+}
+
+button {
+  font-size: 35px;
+  padding: 15px 10px;
+  width: 30%;
+  background-color: ghostwhite;
+  border: 3px solid black;
+}
+
+
 
 /* //////////////////Bulbasaur Modal/////////////////////////// */
 
 #bulbaModal {
   background-color: rgba(0,0,0,0.3);
-  position: fixed;
+  position: absolute;
   width: 475px;
   height: 525px;
   z-index: 1;
-  overflow: auto;
   display: none;
 }
 
@@ -36,7 +90,7 @@ body {
   width: 400px;
   height: 425px;
 	border: 3px solid black;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 #bulbaInfo {
@@ -67,11 +121,10 @@ body {
 
 #charModal {
   background-color: rgba(0,0,0,0.3);
-  position: fixed;
+  position: absolute;
   width: 525px;
   height: 575px;
   z-index: 1;
-  overflow: auto;
   display: none;
 }
 
@@ -84,7 +137,7 @@ body {
   width: 400px;
   height: 475px;
 	border: 3px solid black;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 #charInfo {
@@ -115,11 +168,10 @@ body {
 
 #squirtModal {
   background-color: rgba(0,0,0,0.3);
-  position: fixed;
+  position: absolute;
   width: 475px;
   height: 525px;
   z-index: 1;
-  overflow: auto;
   display: none;
 }
 
@@ -132,7 +184,7 @@ body {
   width: 400px;
   height: 425px;
 	border: 3px solid black;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 #squirtInfo {
@@ -158,6 +210,8 @@ body {
 }
 
 
+/* //////////////////Misc for Pokeballs/////////////////////////// */
+
 td, tr {
   padding: 0 8px;
 }
@@ -174,6 +228,16 @@ td, tr {
 }
 
 .pokeImg {
+  width: 250px;
+  height: 250px;
+}
+
+.pokeballs {
+  display:inline-block;
+  padding: 20px;
+  margin-left: 20px;
+}
+.pokeballs > img {
   width: 250px;
   height: 250px;
 }
