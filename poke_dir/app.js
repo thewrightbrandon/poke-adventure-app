@@ -2,6 +2,47 @@ $(() => {
 
   // const helloThere = alert('You\'re finally ready to start your Pokemon journey! Let\'s go see Professor Oak to get started!')
 
+
+
+
+  ////////////////About Modal////////////////////
+
+  const $openModalAbout = $('#openAboutModal')
+  const $modalAbout = $('#aboutPokemonText')
+  const $closeModalAbout = $('#closeAboutModal')
+
+  const openAboutModal = () => {
+    $modalAbout.css('display', 'flex')
+  }
+
+  const closeAboutModal = () => {
+    $modalAbout.css('display', 'none')
+  }
+
+  $openModalAbout.on('click', openAboutModal)
+  $closeModalAbout.on('click', closeAboutModal)
+
+
+
+  ////////////////Journey Modal////////////////////
+
+  const $openModalJourney = $('#openJourneyModal')
+  const $modalJourney = $('#aboutJourneyText')
+  const $closeModalJourney = $('#closeJourneyModal')
+
+  const openJourneyModal = () => {
+    $modalJourney.css('display', 'flex')
+  }
+
+  const closeJourneyModal = () => {
+    $modalJourney.css('display', 'none')
+  }
+
+  $openModalJourney.on('click', openJourneyModal)
+  $closeModalJourney.on('click', closeJourneyModal)
+
+
+
   ////////////////Bulbasaur Modal////////////////////
 
   $.ajax({
@@ -24,7 +65,7 @@ $(() => {
     $('#bulbaTypes').html(data.types[0].type.name)
     $('#bulbaWeight').html(data.weight)
     $('#bulbaHeight').html(data.height)
-    
+
   },
 
     () => {

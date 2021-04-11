@@ -44,7 +44,9 @@ header {
 }
 
 #talkText {
-
+  font-size: 35px;
+  background-color: ghostwhite;
+  border: 3px solid black;
 }
 
 #talkText:hover {
@@ -60,14 +62,90 @@ header {
   margin: 10%;
 }
 
-button {
+#openAboutModal {
   font-size: 35px;
   padding: 15px 10px;
+  margin: 5% 0;
   width: 30%;
   background-color: ghostwhite;
   border: 3px solid black;
 }
 
+#aboutPokemonText {
+  /* display: flex; */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: ghostwhite;
+  color: #3c5aa6;
+  margin-top: 2%;
+  padding: 2% 5%;
+  z-index: 1;
+  border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.aboutImg > img {
+  widith: 640px;
+  height: 360px;
+}
+
+#closeAboutModal {
+  text-decoration: none;
+  color: #c7a008;
+  font-weight: bold;
+}
+
+
+
+/* //////////////////Journey Div/////////////////////////// */
+
+.aboutJourney {
+  text-align: center;
+  margin: 10%;
+}
+
+#openJourneyModal {
+  font-size: 35px;
+  padding: 15px 10px;
+  margin: 5% 0;
+  width: 30%;
+  background-color: ghostwhite;
+  border: 3px solid black;
+}
+
+#aboutJourneyText {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: ghostwhite;
+  color: #3c5aa6;
+  margin-top: 2%;
+  padding: 2% 5%;
+  z-index: 1;
+  border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  /* display: none; */
+}
+
+.journeyImg > img {
+  width: 640px;
+  height: 360px;
+}
+
+#closeJourneyModal {
+  text-decoration: none;
+  color: #c7a008;
+  font-weight: bold;
+}
+
+
+
+/* //////////////////Journey Div/////////////////////////// */
 
 
 /* //////////////////Bulbasaur Modal/////////////////////////// */
@@ -79,6 +157,7 @@ button {
   height: 525px;
   z-index: 1;
   display: none;
+  overflow: auto;
 }
 
 #bulbaModalText {
