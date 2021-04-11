@@ -43,6 +43,25 @@ $(() => {
 
 
 
+  ////////////////Tools Modal////////////////////
+
+  const $openModalTools = $('#openToolsModal')
+  const $modalTools = $('#aboutToolsText')
+  const $closeModalTools = $('#closeToolsModal')
+
+  const openToolsModal = () => {
+    $modalTools.css('display', 'flex')
+  }
+
+  const closeToolsModal = () => {
+    $modalTools.css('display', 'none')
+  }
+
+  $openModalTools.on('click', openToolsModal)
+  $closeModalTools.on('click', closeToolsModal)
+
+
+
   ////////////////Bulbasaur Modal////////////////////
 
   $.ajax({
@@ -81,9 +100,9 @@ $(() => {
   const $bulbaModalText = $('<div>').attr('id', 'bulbaModalText')
   $bulbaModal.append($bulbaModalText)
 
-  const $bulbaCloseBtn = $('<div>').addClass('closeBtn')
+  const $bulbaCloseBtn = $('<div>')
   $bulbaModalText.append($bulbaCloseBtn)
-  const $closeBulbaModal = $('<a>').attr('href', '#').attr('id', 'closeBulbaModal').text('CLOSE')
+  const $closeBulbaModal = $('<button>').attr('id', 'closeBulbaModal').addClass('closeBtn').text('CLOSE')
   $bulbaCloseBtn.append($closeBulbaModal)
 
   const $bulbaImg = $('<img>').attr('src', 'https://i.imgur.com/igGCQRq.png').addClass('pokeImg')
@@ -190,9 +209,9 @@ $(() => {
   const $charModalText = $('<div>').attr('id', 'charModalText')
   $charModal.append($charModalText)
 
-  const $charCloseBtn = $('<div>').addClass('closeBtn')
+  const $charCloseBtn = $('<div>')
   $charModalText.append($charCloseBtn)
-  const $closeCharModal = $('<a>').attr('href', '#').attr('id', 'closeCharModal').text('CLOSE')
+  const $closeCharModal = $('<button>').attr('id', 'closeCharModal').addClass('closeBtn').text('CLOSE')
   $charCloseBtn.append($closeCharModal)
 
   const $charImg = $('<img>').attr('src', 'https://i.imgur.com/DanoXt9.png').addClass('pokeImg')
@@ -300,9 +319,9 @@ $(() => {
   const $squirtModalText = $('<div>').attr('id', 'squirtModalText')
   $squirtModal.append($squirtModalText)
 
-  const $squirtCloseBtn = $('<div>').addClass('closeBtn')
+  const $squirtCloseBtn = $('<div>')
   $squirtModalText.append($squirtCloseBtn)
-  const $closeSquirtModal = $('<a>').attr('href', '#').attr('id', 'closeSquirtModal').text('CLOSE')
+  const $closeSquirtModal = $('<button>').attr('id', 'closeSquirtModal').addClass('closeBtn').text('CLOSE')
   $squirtCloseBtn.append($closeSquirtModal)
 
   const $squirtImg = $('<img>').attr('src', 'https://i.imgur.com/uu4vMmC.png').addClass('pokeImg')

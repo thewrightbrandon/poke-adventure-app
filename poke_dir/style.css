@@ -90,6 +90,7 @@ header {
 .aboutImg > img {
   widith: 640px;
   height: 360px;
+  border: 3px solid black;
 }
 
 #closeAboutModal {
@@ -117,7 +118,7 @@ header {
 }
 
 #aboutJourneyText {
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
@@ -129,23 +130,72 @@ header {
   border: 3px solid black;
   border-radius: 20px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  /* display: none; */
+  display: none;
 }
 
 .journeyImg > img {
   width: 640px;
   height: 360px;
+  border: 3px solid black;
 }
 
 #closeJourneyModal {
   text-decoration: none;
   color: #c7a008;
+  background-color: #3c5aa6;
   font-weight: bold;
 }
 
 
 
-/* //////////////////Journey Div/////////////////////////// */
+/* //////////////////Tools Div/////////////////////////// */
+
+.aboutTools {
+  text-align: center;
+  margin: 10%;
+}
+
+#openToolsModal {
+  font-size: 35px;
+  padding: 15px 10px;
+  margin: 5% 0;
+  width: 30%;
+  background-color: ghostwhite;
+  border: 3px solid black;
+}
+
+#aboutToolsText {
+  /* display: flex; */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: ghostwhite;
+  text-align: left;
+  color: #3c5aa6;
+  margin-top: 2%;
+  padding: 2% 5%;
+  z-index: 1;
+  border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.toolsImg > img {
+  width: 640px;
+  height: 360px;
+  border: 3px solid black;
+}
+
+#closeToolsModal {
+  text-decoration: none;
+  color: #c7a008;
+  font-weight: bold;
+}
+
+li {
+  text-align: left;
+}
 
 
 /* //////////////////Bulbasaur Modal/////////////////////////// */
@@ -153,8 +203,8 @@ header {
 #bulbaModal {
   background-color: rgba(0,0,0,0.3);
   position: absolute;
-  width: 475px;
-  height: 525px;
+  width: 550px;
+  height: 600px;
   z-index: 1;
   display: none;
   overflow: auto;
@@ -164,10 +214,10 @@ header {
   background-color: ghostwhite;
   text-align: center;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 40px;
   padding: 20px 0;
   width: 400px;
-  height: 425px;
+  height: 475px;
 	border: 3px solid black;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -183,15 +233,16 @@ header {
 }
 
 #chooseBulba {
+  font-size: 20px;
   color: #2a75bb;
   background-color: #ffcb05;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
-  margin-left: 55%;
+  margin-left: 45%;
   margin-bottom: 10px;
-  width: 35%;
+  width: 45%;
 }
 
 
@@ -201,8 +252,8 @@ header {
 #charModal {
   background-color: rgba(0,0,0,0.3);
   position: absolute;
-  width: 525px;
-  height: 575px;
+  width: 550px;
+  height: 600px;
   z-index: 1;
   display: none;
 }
@@ -211,9 +262,9 @@ header {
 	background-color: ghostwhite;
   text-align: center;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 40px;
   padding: 20px 0;
-  width: 400px;
+  width: 425px;
   height: 475px;
 	border: 3px solid black;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
@@ -230,15 +281,16 @@ header {
 }
 
 #chooseChar {
+  font-size: 20px;
   color: #2a75bb;
   background-color: #ffcb05;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
-  margin-left: 55%;
+  margin-left: 45%;
   margin-bottom: 10px;
-  width: 35%;
+  width: 45%;
 }
 
 
@@ -248,8 +300,9 @@ header {
 #squirtModal {
   background-color: rgba(0,0,0,0.3);
   position: absolute;
-  width: 475px;
-  height: 525px;
+  margin: 0 50% 0 50%;
+  width: 550px;
+  height: 600px;
   z-index: 1;
   display: none;
 }
@@ -258,10 +311,10 @@ header {
 	background-color: ghostwhite;
   text-align: center;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 40px;
   padding: 20px 0;
   width: 400px;
-  height: 425px;
+  height: 475px;
 	border: 3px solid black;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -277,15 +330,16 @@ header {
 }
 
 #chooseSquirt {
+  font-size: 20px;
   color: #2a75bb;
   background-color: #ffcb05;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
-  margin-left: 55%;
+  margin-left: 45%;
   margin-bottom: 10px;
-  width: 35%;
+  width: 45%;
 }
 
 
@@ -297,13 +351,13 @@ td, tr {
 
 
 .closeBtn {
+  font-size: 20px;
   background-color: #3c5aa6;
   border: 1px solid black;
   border-radius: 10px;
-  padding: 5px;
-  margin-left: 5%;
-  margin-bottom: 10px;
-  width: 20%;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .pokeImg {
