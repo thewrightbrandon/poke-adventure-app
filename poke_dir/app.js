@@ -11,7 +11,7 @@ $(() => {
   const $modalAbout = $('#aboutPokemonText')
   const $closeModalAbout = $('#closeAboutModal')
 
-  const openAboutModal = () => {
+  const openAboutModal = (event) => {
     $modalAbout.css('display', 'flex')
   }
 
@@ -23,6 +23,105 @@ $(() => {
   $closeModalAbout.on('click', closeAboutModal)
 
 
+
+  ////////////////Input Modal////////////////////
+
+  const $pokeModal = $('<div>').attr('id', 'pokeModal')
+  $('#pokemonForm').append($pokeModal)
+  const $pokeModalText = $('<div>').attr('id', 'pokeModalText')
+  $pokeModal.append($pokeModalText)
+
+  const $pokeCloseBtn = $('<div>')
+  $pokeModalText.append($pokeCloseBtn)
+  const $closePokeModal = $('<button>').attr('id', 'closePokeModal').addClass('closeBtn').text('CLOSE')
+  $pokeCloseBtn.append($closePokeModal)
+
+  const $pokeImg = $('<img>').attr('id', 'pokeImg')
+  $pokeModalText.append($pokeImg)
+
+  const $pokeInfo = $('<table>').attr('id', 'pokeInfo')
+  $pokeModalText.append($pokeInfo)
+
+  const $pokeRow1 = $('<tr>')
+  $pokeInfo.append($pokeRow1)
+
+  const $poke1 = $('<th>').text('MOVES')
+  $pokeRow1.append($poke1)
+  const $poke2 = $('<th>').text('NAME')
+  $pokeRow1.append($poke2)
+  const $poke3 = $('<th>').text('TYPE')
+  $pokeRow1.append($poke3)
+  const $poke4 = $('<th>').text('WEIGHT')
+  $pokeRow1.append($poke4)
+  const $poke5 = $('<th>').text('HEIGHT')
+  $pokeRow1.append($poke5)
+  const $poke6 = $('<th>').text('ID#')
+  $pokeRow1.append($poke6)
+
+  const $pokeRow2 = $('<tr>')
+  $pokeInfo.append($pokeRow2)
+
+  const $pokeMove1 = $('<td>').attr('id', 'pokeMove1')
+  $pokeRow2.append($pokeMove1)
+  const $pokeName = $('<td>').attr('id', 'pokeName')
+  $pokeRow2.append($pokeName)
+  const $pokeTypes = $('<td>').attr('id', 'pokeTypes')
+  $pokeRow2.append($pokeTypes)
+  const $pokeWeight = $('<td>').attr('id', 'pokeWeight')
+  $pokeRow2.append($pokeWeight)
+  const $pokeHeight = $('<td>').attr('id', 'pokeHeight')
+  $pokeRow2.append($pokeHeight)
+  const $pokeId = $('<td>').attr('id', 'pokeId')
+  $pokeRow2.append($pokeId)
+
+  const $pokeRow3 = $('<tr>')
+  $pokeInfo.append($pokeRow3)
+
+  const $pokeMove2 = $('<td>').attr('id', 'pokeMove2')
+  $pokeRow3.append($pokeMove2)
+
+
+
+  $('form').on('submit', (event) => {
+
+    event.preventDefault()
+    $('input').empty()
+
+    const $userInput = $('input[type="text"]').val() || 6
+
+
+    $.ajax({
+
+    url: "https://pokeapi.co/api/v2/pokemon/" + $userInput
+
+    }).then(
+      (data) => {
+
+      console.log(data)
+
+      for (let i = 0; i < 2; i++) {
+        const randomMove1 = Math.floor(Math.random() * data.moves.length)
+        $('#pokeMove1').html(data.moves[randomMove1].move.name)
+        const randomMove2 = Math.floor(Math.random() * data.moves.length)
+        $('#pokeMove2').html(data.moves[randomMove2].move.name)
+      }
+      $('#pokeName').html(data.name)
+      $('#pokeId').html(data.id)
+      $('#pokeTypes').html(data.types[0].type.name)
+      $('#pokeWeight').html(data.weight)
+      $('#pokeHeight').html(data.height)
+      $('#pokeImg').attr(`src`, `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${$userInput}.png`)
+
+    },
+
+      () => {
+
+        console.log('bad request')
+
+      }
+    )
+
+  })
 
   ////////////////Journey Modal////////////////////
 
@@ -64,37 +163,6 @@ $(() => {
 
   ////////////////Bulbasaur Modal////////////////////
 
-  $.ajax({
-
-  url: "https://pokeapi.co/api/v2/pokemon/bulbasaur"
-
-  }).then(
-    (data) => {
-
-    console.log(data)
-
-    for (let i = 0; i < 2; i++) {
-      const randomMove1 = Math.floor(Math.random() * data.moves.length)
-      $('#bulbaMove1').html(data.moves[randomMove1].move.name)
-      const randomMove2 = Math.floor(Math.random() * data.moves.length)
-      $('#bulbaMove2').html(data.moves[randomMove2].move.name)
-    }
-    $('#bulbaName').html(data.name)
-    $('#bulbaId').html(data.id)
-    $('#bulbaTypes').html(data.types[0].type.name)
-    $('#bulbaWeight').html(data.weight)
-    $('#bulbaHeight').html(data.height)
-
-  },
-
-    () => {
-
-      console.log('bad request')
-
-    }
-  )
-
-
   const $bulbaModal = $('<div>').attr('id', 'bulbaModal')
   $('.container').append($bulbaModal)
   const $bulbaModalText = $('<div>').attr('id', 'bulbaModalText')
@@ -124,7 +192,7 @@ $(() => {
   $bulbaRow1.append($bulba4)
   const $bulba5 = $('<th>').text('HEIGHT')
   $bulbaRow1.append($bulba5)
-  const $bulba6 = $('<th>').text('ID')
+  const $bulba6 = $('<th>').text('ID#')
   $bulbaRow1.append($bulba6)
 
   const $bulbaRow2 = $('<tr>')
@@ -171,28 +239,28 @@ $(() => {
 
 
 
-  ////////////////Charmander Modal////////////////////
-
   $.ajax({
 
-    url: "https://pokeapi.co/api/v2/pokemon/charmander"
+
+
+  url: "https://pokeapi.co/api/v2/pokemon/bulbasaur"
 
   }).then(
     (data) => {
 
-      console.log(data)
+    console.log(data)
 
-      for (let i = 0; i < 2; i++) {
-        const randomMove1 = Math.floor(Math.random() * data.moves.length)
-        $('#charMove1').html(data.moves[randomMove1].move.name)
-        const randomMove2 = Math.floor(Math.random() * data.moves.length)
-        $('#charMove2').html(data.moves[randomMove2].move.name)
-      }
-      $('#charName').html(data.name)
-      $('#charId').html(data.id)
-      $('#charTypes').html(data.types[0].type.name)
-      $('#charWeight').html(data.weight)
-      $('#charHeight').html(data.height)
+    for (let i = 0; i < 2; i++) {
+      const randomMove1 = Math.floor(Math.random() * data.moves.length)
+      $('#bulbaMove1').html(data.moves[randomMove1].move.name)
+      const randomMove2 = Math.floor(Math.random() * data.moves.length)
+      $('#bulbaMove2').html(data.moves[randomMove2].move.name)
+    }
+    $('#bulbaName').html(data.name)
+    $('#bulbaId').html(data.id)
+    $('#bulbaTypes').html(data.types[0].type.name)
+    $('#bulbaWeight').html(data.weight)
+    $('#bulbaHeight').html(data.height)
 
   },
 
@@ -203,6 +271,9 @@ $(() => {
     }
   )
 
+
+
+  ////////////////Charmander Modal////////////////////
 
   const $charModal = $('<div>').attr('id', 'charModal')
   $('.container').append($charModal)
@@ -233,7 +304,7 @@ $(() => {
   $charRow1.append($char4)
   const $char5 = $('<th>').text('HEIGHT')
   $charRow1.append($char5)
-  const $char6 = $('<th>').text('ID')
+  const $char6 = $('<th>').text('ID#')
   $charRow1.append($char6)
 
   const $charRow2 = $('<tr>')
@@ -280,11 +351,9 @@ $(() => {
 
 
 
-  ////////////////Squirtle Modal////////////////////
-
   $.ajax({
 
-    url: "https://pokeapi.co/api/v2/pokemon/squirtle"
+    url: "https://pokeapi.co/api/v2/pokemon/charmander"
 
   }).then(
     (data) => {
@@ -292,27 +361,29 @@ $(() => {
       console.log(data)
 
       for (let i = 0; i < 2; i++) {
-    // console.log(data.moves[i].move.name);
         const randomMove1 = Math.floor(Math.random() * data.moves.length)
-        $('#squirtMove1').html(data.moves[randomMove1].move.name)
+        $('#charMove1').html(data.moves[randomMove1].move.name)
         const randomMove2 = Math.floor(Math.random() * data.moves.length)
-        $('#squirtMove2').html(data.moves[randomMove2].move.name)
+        $('#charMove2').html(data.moves[randomMove2].move.name)
       }
-      $('#squirtName').html(data.name)
-      $('#squirtId').html(data.id)
-      $('#squirtTypes').html(data.types[0].type.name)
-      $('#squirtWeight').html(data.weight)
-      $('#squirtHeight').html(data.height)
+      $('#charName').html(data.name)
+      $('#charId').html(data.id)
+      $('#charTypes').html(data.types[0].type.name)
+      $('#charWeight').html(data.weight)
+      $('#charHeight').html(data.height)
 
-    },
+  },
 
-      () => {
+    () => {
 
-        console.log('bad request')
+      console.log('bad request')
 
     }
   )
 
+
+
+  ////////////////Squirtle Modal////////////////////
 
   const $squirtModal = $('<div>').attr('id', 'squirtModal')
   $('.container').append($squirtModal)
@@ -343,7 +414,7 @@ $(() => {
   $squirtRow1.append($squirt4)
   const $squirt5 = $('<th>').text('HEIGHT')
   $squirtRow1.append($squirt5)
-  const $squirt6 = $('<th>').text('ID')
+  const $squirt6 = $('<th>').text('ID#')
   $squirtRow1.append($squirt6)
 
   const $squirtRow2 = $('<tr>')
@@ -387,5 +458,40 @@ $(() => {
 
   $openModalSquirt.on('click', openSquirtModal)
   $closeModalSquirt.on('click', closeSquirtModal)
+
+
+
+  $.ajax({
+
+    url: "https://pokeapi.co/api/v2/pokemon/squirtle"
+
+  }).then(
+    (data) => {
+
+      console.log(data)
+
+      for (let i = 0; i < 2; i++) {
+    // console.log(data.moves[i].move.name);
+        const randomMove1 = Math.floor(Math.random() * data.moves.length)
+        $('#squirtMove1').html(data.moves[randomMove1].move.name)
+        const randomMove2 = Math.floor(Math.random() * data.moves.length)
+        $('#squirtMove2').html(data.moves[randomMove2].move.name)
+      }
+      $('#squirtName').html(data.name)
+      $('#squirtId').html(data.id)
+      $('#squirtTypes').html(data.types[0].type.name)
+      $('#squirtWeight').html(data.weight)
+      $('#squirtHeight').html(data.height)
+
+    },
+
+      () => {
+
+        console.log('bad request')
+
+    }
+  )
+
+
 
 })
