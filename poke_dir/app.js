@@ -31,10 +31,10 @@ $(() => {
   const $pokeModalText = $('<div>').attr('id', 'pokeModalText')
   $pokeModal.append($pokeModalText)
 
-  const $pokeCloseBtn = $('<div>')
-  $pokeModalText.append($pokeCloseBtn)
-  const $closePokeModal = $('<button>').attr('id', 'closePokeModal').addClass('closeBtn').text('CLOSE')
-  $pokeCloseBtn.append($closePokeModal)
+  const $pokedex = $('<div>')
+  $pokeModalText.append($pokedex)
+  const $pokedexText = $('<h2>').attr('id', 'pokedex').text('National Pokédex')
+  $pokedex.append($pokedexText)
 
   const $pokeImg = $('<img>').attr('id', 'pokeImg')
   $pokeModalText.append($pokeImg)
@@ -120,6 +120,8 @@ $(() => {
 
       }
     )
+
+    $('form').trigger('reset')
 
   })
 
