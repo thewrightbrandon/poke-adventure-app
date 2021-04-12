@@ -52,7 +52,7 @@ header {
 }
 
 #talkText:hover {
-  opacity: .5;
+  opacity: .7;
 }
 
 
@@ -74,8 +74,8 @@ header {
 }
 
 #openAboutModal:hover, #openJourneyModal:hover, #openToolsModal:hover {
-  color: #3c5aa6;
-  background-color: #ffcb05;
+  color: #ffcb05;
+  background-color: #2a75bb;
   font-weight: bold;
 }
 
@@ -110,6 +110,10 @@ header {
   widith: 640px;
   height: 360px;
   border: 3px solid black;
+}
+
+p {
+  font-size: 18px;
 }
 
 
@@ -169,17 +173,16 @@ header {
 
 li {
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
 
-/* //////////////////Input Text/////////////////////////// */
+/* //////////////////Pokedex/////////////////////////// */
 
 #pokemonForm {
   text-align: center;
 }
-
 
 #inputBox {
   font-size: 20px;
@@ -196,13 +199,13 @@ li {
 }
 
 #submitBtn:hover {
-  color: #3c5aa6;
-  background-color: #ffcb05;
+  color: #ffcb05;
+  background-color: #2a75bb;
   font-weight: bold;
 }
 
 #pokeModalText {
-  background-color: red;
+  background-color: crimson;
   color: ghostwhite;
   text-align: center;
   margin: auto;
@@ -211,7 +214,9 @@ li {
   width: 425px;
   height: 475px;
 	border: 3px solid black;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
 }
 
 #pokeInfo {
@@ -229,6 +234,7 @@ li {
 #pokedex {
   text-align: center;
   font-size: 35px;
+  text-decoration: underline;
   margin-top: 10px;
 }
 
@@ -266,6 +272,7 @@ li {
   text-decoration: none;
   color: #c7a008;
   font-weight: bold;
+  margin-right: 68%;
 }
 
 #chooseBulba, #chooseChar, #chooseSquirt  {
@@ -296,7 +303,7 @@ td, tr {
   border-radius: 10px;
   padding: 10px 15px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .pokeImg {
@@ -322,3 +329,35 @@ td, tr {
 }
 
 /* //////////////////Animations/////////////////////////// */
+
+/* Used https://animista.net/ for help with this animation */
+
+.wobble:hover {
+  animation: wobble 0.8s both;
+}
+
+@keyframes wobble {
+
+  0% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;  }
+}
