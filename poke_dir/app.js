@@ -487,10 +487,35 @@ $(() => {
   const $closeLuckModal = $('<button>').attr('id', 'closeLuckModal').addClass('closeBtn').text('ON SECOND THOUGHT...')
   $luckCloseBtn.append($closeLuckModal)
 
-  const $luckImg = $('<img>').attr('src', 'https://i.imgur.com/uMnKjfx.jpg').attr('id', 'luckImg')
+  const $luckMain = $('<div>').attr('id', 'luckMain')
+  const $luckText = $('<p>').text('Excellent choice! I can see you and your Pokémon are going to do great things together! Enter the tall grass to begin your journey!')
   const $oakImg = $('<img>').attr('src', 'https://i.imgur.com/wyX51xK.png').attr('id', 'oakPic2')
-  const $luckInfo = $('<table>').attr('id', 'luckInfo')
-  $luckModalText.append($luckImg).append($oakImg).append($luckInfo)
+  $luckModalText.append($luckMain)
+  $luckMain.append($luckText).append($oakImg)
 
+
+  const $luckImg = $('<img>').attr('src', 'https://i.imgur.com/uMnKjfx.jpg').attr('id', 'luckImg')
+  $luckModalText.append($luckImg)
+
+  const $luckGo = $('<div>').attr('id', 'luckGo')
+  $luckModalText.append($luckGo)
+  const $luckLink = $('<a>').attr('target', '_blank').attr('href', 'https://www.youtube.com/watch?v=6xKWiCMKKJg').attr('id', 'luckLink').addClass('goBtn').text('*ENTER THE TALL GRASS*')
+  $luckGo.append($luckLink)
+
+
+  const $openModalLuck = $('#chooseBulba')
+  const $modalLuck = $('#luckModal')
+  const $closeModalLuck = $('#closeLuckModal')
+
+  const openLuckModal = () => {
+    $modalLuck.css('display', 'flex')
+  }
+
+  const closeLuckModal = () => {
+    $modalLuck.css('display', 'none')
+  }
+
+  $openModalLuck.on('click', openLuckModal)
+  $closeModalLuck.on('click', closeLuckModal)
 
 })

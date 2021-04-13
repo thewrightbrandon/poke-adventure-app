@@ -111,6 +111,10 @@ header > h3 {
   font-weight: bold;
 }
 
+#closeAbout:hover, #closeJourney:hover, #closeTools:hover {
+  text-decoration: underline;
+}
+
 
 
 /* //////////////////Info Box Text/////////////////////////// */
@@ -269,6 +273,10 @@ ul > p {
   margin-right: 68%;
 }
 
+#closeBulbaModal:hover, #closeCharModal:hover, #closeSquirtModal:hover {
+  text-decoration: underline;
+}
+
 #chooseBulba, #chooseChar, #chooseSquirt {
   font-size: 25px;
   color: #2a75bb;
@@ -280,6 +288,10 @@ ul > p {
   margin-left: 45%;
   margin-bottom: 10px;
   width: 40%;
+}
+
+#chooseBulba:hover, #chooseChar:hover, #chooseSquirt:hover {
+  text-decoration: underline;
 }
 
 
@@ -325,6 +337,100 @@ td, tr {
 .pokeballs > img {
   width: 200px;
 }
+
+
+
+/* //////////////////Good Luck Modal/////////////////////////// */
+
+#luckModal {
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  overflow: auto;
+}
+
+#luckMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5%
+}
+
+#luckMain > p {
+  text-align: left;
+  background-color: ghostwhite;
+  color: #3c5aa6;
+  margin-top: 2%;
+  padding: 2% 5%;
+  z-index: 1;
+  border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Press Start 2P', cursive;
+  line-height: 25px;
+}
+
+#luckModalText {
+  background-color: ghostwhite;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 75%;
+  height: 73%;
+	border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+#luckText {
+  width: 100%;
+  font-family: 'Electrolize', sans-serif;
+}
+
+#luckImg {
+  width: 540px;
+  height: 360px;
+  border: 3px solid black;
+}
+
+#closeLuckModal {
+  text-decoration: none;
+  color: ghostwhite;
+  font-weight: bold;
+
+}
+
+#closeLuckModal:hover {
+  text-decoration: underline;
+}
+
+#luckGo {
+  margin-top: 4%;
+}
+
+#luckLink {
+  font-size: 25px;
+  color: #2a75bb;
+  background-color: #ffcb05;
+  font-family: 'Bangers', cursive;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 40%;
+  text-decoration: none;
+}
+
+#luckLink:hover {
+  text-decoration: underline;
+}
+
 
 /* //////////////////Media Queries/////////////////////////// */
 
