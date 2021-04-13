@@ -11,7 +11,7 @@ $(() => {
   const $modalAbout = $('#aboutPokemonText')
   const $closeAbout = $('#closeAbout')
 
-  const openAbout = (event) => {
+  const openAbout = () => {
     $modalAbout.css('display', 'flex')
   }
 
@@ -452,7 +452,6 @@ $(() => {
       console.log(data)
 
       for (let i = 0; i < 2; i++) {
-    // console.log(data.moves[i].move.name);
         const randomMove1 = Math.floor(Math.random() * data.moves.length)
         $('#squirtMove1').html(data.moves[randomMove1].move.name)
         const randomMove2 = Math.floor(Math.random() * data.moves.length)
