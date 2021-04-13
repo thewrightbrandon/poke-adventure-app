@@ -229,9 +229,9 @@ $(() => {
   $closeModalBulba.on('click', closeBulbaModal)
 
 
-  $('#chooseBulba').on('click', () => {
-    $('#chooseBulba').append('<embed id="bulbaAudio" type="audio/mpeg" src="audio/bulbasaur.mp3" autostart="true" hidden="true"></embed>')
-  })
+  // $('#chooseBulba').on('click', () => {
+  //
+  // })
 
 
 
@@ -333,9 +333,9 @@ $(() => {
   $closeModalChar.on('click', closeCharModal)
 
 
-  $('#chooseChar').on('click', () => {
-    $('#chooseChar').append('<embed id="charAudio" type="audio/mpeg" src="audio/charmander.mp3" autostart="true" hidden="true"></embed>')
-  })
+  // $('#chooseChar').on('click', () => {
+  //
+  // })
 
 
 
@@ -436,9 +436,9 @@ $(() => {
   $closeModalSquirt.on('click', closeSquirtModal)
 
 
-  $('#chooseSquirt').on('click', () => {
-    $('#chooseSquirt').append('<embed id="squirtAudio" type="audio/mp3" src="audio/squirtle.mp3" autostart="true" hidden="true"></embed>')
-  })
+  // $('#chooseSquirt').on('click', () => {
+  //
+  // })
 
 
 
@@ -472,6 +472,25 @@ $(() => {
     }
   )
 
+
+
+////////////////Goodluck Modal////////////////////
+
+  const $luckModal = $('<div>').attr('id', 'luckModal')
+  $('body').append($luckModal)
+
+  const $luckModalText = $('<div>').attr('id', 'luckModalText')
+  $luckModal.append($luckModalText)
+
+  const $luckCloseBtn = $('<div>')
+  $luckModalText.append($luckCloseBtn)
+  const $closeLuckModal = $('<button>').attr('id', 'closeLuckModal').addClass('closeBtn').text('ON SECOND THOUGHT...')
+  $luckCloseBtn.append($closeLuckModal)
+
+  const $luckImg = $('<img>').attr('src', 'https://i.imgur.com/uMnKjfx.jpg').attr('id', 'luckImg')
+  const $oakImg = $('<img>').attr('src', 'https://i.imgur.com/wyX51xK.png').attr('id', 'oakPic2')
+  const $luckInfo = $('<table>').attr('id', 'luckInfo')
+  $luckModalText.append($luckImg).append($oakImg).append($luckInfo)
 
 
 })

@@ -364,7 +364,7 @@ td, tr {
 /* Used https://animista.net/ for help with this animation */
 
 .wobble:hover {
-  animation: wobble 0.8s both;
+  animation: wobble .8s;
 }
 
 @keyframes wobble {
