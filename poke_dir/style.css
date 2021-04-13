@@ -8,9 +8,31 @@ body {
 
 header {
   text-align: center;
-  background-image:
+  /* padding: */
+  background-image: url('https://i.imgur.com/7UbspCc.jpg');
+  background-position: center;
+  background-size: cover;
+  font-size: 30px;
+  font-family: 'Bangers', cursive;
+  text-shadow: 4px 4px 6px black;
+  padding: 10px 0 5px;
 }
 
+header > h1, h3 {
+  margin-bottom: 25px;
+}
+
+header > h1 {
+  color: #ffcb05;
+}
+
+header > h1, h3 {
+  margin-top: 0;
+}
+
+header > h3 {
+  color: #2a75bb;
+}
 
 
 /* //////////////////Oak Div and Tool Tip/////////////////////////// */
@@ -39,6 +61,8 @@ header {
   border: 3px solid black;
   border-radius: 20px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Press Start 2P', cursive;
+  line-height: 25px;
 }
 
 .toolTip:hover .toolTipText {
@@ -51,6 +75,7 @@ header {
   border: 3px solid black;
   width: 350px;
   margin-left: 16%;
+  font-family: 'Bangers', cursive;
 }
 
 #talkText:hover {
@@ -59,7 +84,7 @@ header {
 
 
 
-/* //////////////////Info Modals/////////////////////////// */
+/* //////////////////Info Boxes/////////////////////////// */
 
 .aboutPokemon, .aboutJourney, .aboutTools {
   text-align: center;
@@ -73,17 +98,17 @@ header {
   width: 35%;
   background-color: ghostwhite;
   border: 3px solid black;
+  font-family: 'Bangers', cursive;
 }
 
 #openAbout:hover, #openJourney:hover, #openTools:hover {
   color: #ffcb05;
   background-color: #2a75bb;
-  font-weight: bold;
 }
 
 #closeAbout, #closeJourney, #closeTools {
   text-decoration: none;
-  color: #c7a008;
+  color: ghostwhite;
   font-weight: bold;
 }
 
@@ -106,6 +131,7 @@ header {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   display: none;
+  font-family: 'Electrolize', sans-serif;
 }
 
 .aboutImg > img {
@@ -137,6 +163,7 @@ p {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   display: none;
+  font-family: 'Electrolize', sans-serif;
 }
 
 .journeyImg > img {
@@ -165,6 +192,7 @@ p {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   display: none;
+  font-family: 'Electrolize', sans-serif;
 }
 
 .toolsImg > img {
@@ -204,12 +232,12 @@ ul > p {
   padding: 10px 15px;
   border: 3px solid black;
   background-color: ghostwhite;
+  font-family: 'Bangers', cursive;
 }
 
 #submitBtn:hover {
   color: #ffcb05;
   background-color: #2a75bb;
-  font-weight: bold;
 }
 
 #pokeModalText {
@@ -230,6 +258,7 @@ ul > p {
 #pokeInfo {
   width: 100%;
   margin-top: 5%;
+  font-family: 'Electrolize', sans-serif;
 }
 
 #pokeImg {
@@ -244,6 +273,8 @@ ul > p {
   font-size: 35px;
   text-decoration: underline;
   margin-top: 10px;
+  font-weight: normal;
+  font-family: 'Bangers', cursive;
 }
 
 
@@ -274,26 +305,27 @@ ul > p {
 
 #bulbaInfo, #charInfo, #squirtInfo {
   width: 100%;
+  font-family: 'Electrolize', sans-serif;
 }
 
 #closeBulbaModal, #closeCharModal, #closeSquirtModal {
   text-decoration: none;
-  color: #c7a008;
+  color: ghostwhite;
   font-weight: bold;
   margin-right: 68%;
 }
 
 #chooseBulba, #chooseChar, #chooseSquirt  {
-  font-size: 20px;
+  font-size: 25px;
   color: #2a75bb;
   background-color: #ffcb05;
-  font-weight: bold;
+  font-family: 'Bangers', cursive;
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
   margin-left: 45%;
   margin-bottom: 10px;
-  width: 45%;
+  width: 40%;
 }
 
 
@@ -304,7 +336,10 @@ ul > p {
   text-align: center;
   color: ghostwhite;
   margin-bottom: 10%;
-  font-size: 33px;
+  font-size: 40px;
+  font-family: 'Bangers', cursive;
+  font-weight: normal;
+  text-shadow: 4px 4px 6px black;
 }
 
 td, tr {
@@ -313,12 +348,13 @@ td, tr {
 
 .closeBtn {
   font-size: 20px;
-  background-color: #3c5aa6;
+  background-color: crimson;
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: 'Electrolize', sans-serif;
 }
 
 .pokeImg {
@@ -344,7 +380,7 @@ td, tr {
     background: linear-gradient(#2a75bb, #ffcb05)
   }
 
-  p{
+  p {
 
   }
 

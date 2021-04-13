@@ -125,6 +125,8 @@ $(() => {
 
   })
 
+
+
   ////////////////POKEMON JOURNEY////////////////////
 
   const $openJourney = $('#openJourney')
@@ -176,42 +178,30 @@ $(() => {
   $bulbaCloseBtn.append($closeBulbaModal)
 
   const $bulbaImg = $('<img>').attr('src', 'https://i.imgur.com/igGCQRq.png').addClass('pokeImg')
-  $bulbaModalText.append($bulbaImg)
-
   const $bulbaInfo = $('<table>').attr('id', 'bulbaInfo')
-  $bulbaModalText.append($bulbaInfo)
+  $bulbaModalText.append($bulbaImg).append($bulbaInfo)
 
   const $bulbaRow1 = $('<tr>')
   $bulbaInfo.append($bulbaRow1)
 
   const $bulba1 = $('<th>').text('MOVES')
-  $bulbaRow1.append($bulba1)
   const $bulba2 = $('<th>').text('NAME')
-  $bulbaRow1.append($bulba2)
   const $bulba3 = $('<th>').text('TYPE')
-  $bulbaRow1.append($bulba3)
   const $bulba4 = $('<th>').text('WEIGHT')
-  $bulbaRow1.append($bulba4)
   const $bulba5 = $('<th>').text('HEIGHT')
-  $bulbaRow1.append($bulba5)
   const $bulba6 = $('<th>').text('ID#')
-  $bulbaRow1.append($bulba6)
+  $bulbaRow1.append($bulba1).append($bulba2).append($bulba3).append($bulba4).append($bulba5).append($bulba6)
 
   const $bulbaRow2 = $('<tr>')
   $bulbaInfo.append($bulbaRow2)
 
   const $bulbaMove1 = $('<td>').attr('id', 'bulbaMove1')
-  $bulbaRow2.append($bulbaMove1)
   const $bulbaName = $('<td>').attr('id', 'bulbaName')
-  $bulbaRow2.append($bulbaName)
   const $bulbaTypes = $('<td>').attr('id', 'bulbaTypes')
-  $bulbaRow2.append($bulbaTypes)
   const $bulbaWeight = $('<td>').attr('id', 'bulbaWeight')
-  $bulbaRow2.append($bulbaWeight)
   const $bulbaHeight = $('<td>').attr('id', 'bulbaHeight')
-  $bulbaRow2.append($bulbaHeight)
   const $bulbaId = $('<td>').attr('id', 'bulbaId')
-  $bulbaRow2.append($bulbaId)
+  $bulbaRow2.append($bulbaMove1).append($bulbaName).append($bulbaTypes).append($bulbaWeight).append($bulbaHeight).append($bulbaId)
 
   const $bulbaRow3 = $('<tr>')
   $bulbaInfo.append($bulbaRow3)
@@ -292,42 +282,30 @@ $(() => {
   $charCloseBtn.append($closeCharModal)
 
   const $charImg = $('<img>').attr('src', 'https://i.imgur.com/DanoXt9.png').addClass('pokeImg')
-  $charModalText.append($charImg)
-
   const $charInfo = $('<table>').attr('id', 'charInfo')
-  $charModalText.append($charInfo)
+  $charModalText.append($charImg).append($charInfo)
 
   const $charRow1 = $('<tr>')
   $charInfo.append($charRow1)
 
   const $char1 = $('<th>').text('MOVES')
-  $charRow1.append($char1)
   const $char2 = $('<th>').text('NAME')
-  $charRow1.append($char2)
   const $char3 = $('<th>').text('TYPE')
-  $charRow1.append($char3)
   const $char4 = $('<th>').text('WEIGHT')
-  $charRow1.append($char4)
   const $char5 = $('<th>').text('HEIGHT')
-  $charRow1.append($char5)
   const $char6 = $('<th>').text('ID#')
-  $charRow1.append($char6)
+  $charRow1.append($char1).append($char2).append($char3).append($char4).append($char5).append($char6)
 
   const $charRow2 = $('<tr>')
   $charInfo.append($charRow2)
 
   const $charMove1 = $('<td>').attr('id', 'charMove1')
-  $charRow2.append($charMove1)
   const $charName = $('<td>').attr('id', 'charName')
-  $charRow2.append($charName)
   const $charTypes = $('<td>').attr('id', 'charTypes')
-  $charRow2.append($charTypes)
   const $charWeight = $('<td>').attr('id', 'charWeight')
-  $charRow2.append($charWeight)
   const $charHeight = $('<td>').attr('id', 'charHeight')
-  $charRow2.append($charHeight)
   const $charId = $('<td>').attr('id', 'charId')
-  $charRow2.append($charId)
+  $charRow2.append($charMove1).append($charName).append($charTypes).append($charWeight).append($charHeight).append($charId)
 
   const $charRow3 = $('<tr>')
   $charInfo.append($charRow3)
@@ -337,7 +315,6 @@ $(() => {
 
   const $chooseChar = $('<button>').attr('id', 'chooseChar').text('I CHOOSE YOU!')
   $charModalText.append($chooseChar)
-
 
 
   const $openModalChar = $('#openCharModal')
@@ -403,46 +380,35 @@ $(() => {
 
   const $squirtCloseBtn = $('<div>')
   $squirtModalText.append($squirtCloseBtn)
-  const $closeSquirtModal = $('<button>').attr('id', 'closeSquirtModal').addClass('closeBtn').text('CLOSE')
+  const $closeSquirtModal =
+  $('<button>').attr('id','closeSquirtModal').addClass('closeBtn').text('CLOSE')
   $squirtCloseBtn.append($closeSquirtModal)
 
   const $squirtImg = $('<img>').attr('src', 'https://i.imgur.com/uu4vMmC.png').addClass('pokeImg')
-  $squirtModalText.append($squirtImg)
-
   const $squirtInfo = $('<table>').attr('id', 'squirtInfo')
-  $squirtModalText.append($squirtInfo)
+  $squirtModalText.append($squirtImg).append($squirtInfo)
 
   const $squirtRow1 = $('<tr>')
   $squirtInfo.append($squirtRow1)
 
   const $squirt1 = $('<th>').text('MOVES')
-  $squirtRow1.append($squirt1)
   const $squirt2 = $('<th>').text('NAME')
-  $squirtRow1.append($squirt2)
   const $squirt3 = $('<th>').text('TYPE')
-  $squirtRow1.append($squirt3)
   const $squirt4 = $('<th>').text('WEIGHT')
-  $squirtRow1.append($squirt4)
   const $squirt5 = $('<th>').text('HEIGHT')
-  $squirtRow1.append($squirt5)
   const $squirt6 = $('<th>').text('ID#')
-  $squirtRow1.append($squirt6)
+  $squirtRow1.append($squirt1).append($squirt2).append($squirt3).append($squirt4).append($squirt5).append($squirt6)
 
   const $squirtRow2 = $('<tr>')
   $squirtInfo.append($squirtRow2)
 
   const $squirtMove1 = $('<td>').attr('id', 'squirtMove1')
-  $squirtRow2.append($squirtMove1)
   const $squirtName = $('<td>').attr('id', 'squirtName')
-  $squirtRow2.append($squirtName)
   const $squirtTypes = $('<td>').attr('id', 'squirtTypes')
-  $squirtRow2.append($squirtTypes)
   const $squirtWeight = $('<td>').attr('id', 'squirtWeight')
-  $squirtRow2.append($squirtWeight)
   const $squirtHeight = $('<td>').attr('id', 'squirtHeight')
-  $squirtRow2.append($squirtHeight)
   const $squirtId = $('<td>').attr('id', 'squirtId')
-  $squirtRow2.append($squirtId)
+  $squirtRow2.append($squirtMove1).append($squirtName).append($squirtTypes).append($squirtWeight).append($squirtHeight).append($squirtId)
 
   const $squirtRow3 = $('<tr>')
   $squirtInfo.append($squirtRow3)
@@ -452,7 +418,6 @@ $(() => {
 
   const $chooseSquirt = $('<button>').attr('id', 'chooseSquirt').text('I CHOOSE YOU!')
   $squirtModalText.append($chooseSquirt)
-
 
 
   const $openModalSquirt = $('#openSquirtModal')
