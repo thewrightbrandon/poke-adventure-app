@@ -499,11 +499,15 @@ $(() => {
 
   const $luckGo = $('<div>').attr('id', 'luckGo')
   $luckModalText.append($luckGo)
-  const $luckLink = $('<a>').attr('target', '_blank').attr('href', 'https://www.youtube.com/watch?v=6xKWiCMKKJg').attr('id', 'luckLink').addClass('goBtn').text('*ENTER THE TALL GRASS*')
+  const $luckLink = $('<a>').attr('target', '_blank').attr
+  ('href', 'https://www.youtube.com/watch?v=6xKWiCMKKJg?autoplay=1').attr
+  ('id', 'luckLink').addClass('goBtn').text('*ENTER THE TALL GRASS*')
   $luckGo.append($luckLink)
 
 
-  const $openModalLuck = $('#chooseBulba')
+  const $openLuckBulba = $('#chooseBulba')
+  const $openLuckChar = $('#chooseChar')
+  const $openLuckSquirt = $('#chooseSquirt')
   const $modalLuck = $('#luckModal')
   const $closeModalLuck = $('#closeLuckModal')
 
@@ -515,7 +519,9 @@ $(() => {
     $modalLuck.css('display', 'none')
   }
 
-  $openModalLuck.on('click', openLuckModal)
+  $openLuckBulba.on('click', openLuckModal)
+  $openLuckChar.on('click', openLuckModal)
+  $openLuckSquirt.on('click', openLuckModal)
   $closeModalLuck.on('click', closeLuckModal)
 
 })
