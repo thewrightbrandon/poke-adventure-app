@@ -5,26 +5,26 @@ $(() => {
 
 
 
-  ////////////////About Modal////////////////////
+  ////////////////POKEMON ABOUT////////////////////
 
-  const $openModalAbout = $('#openAboutModal')
+  const $openAbout = $('#openAbout')
   const $modalAbout = $('#aboutPokemonText')
-  const $closeModalAbout = $('#closeAboutModal')
+  const $closeAbout = $('#closeAbout')
 
-  const openAboutModal = (event) => {
+  const openAbout = (event) => {
     $modalAbout.css('display', 'flex')
   }
 
-  const closeAboutModal = () => {
+  const closeAbout = () => {
     $modalAbout.css('display', 'none')
   }
 
-  $openModalAbout.on('click', openAboutModal)
-  $closeModalAbout.on('click', closeAboutModal)
+  $openAbout.on('click', openAbout)
+  $closeAbout.on('click', closeAbout)
 
 
 
-  ////////////////Input Modal////////////////////
+  ////////////////POKEDEX/INPUT////////////////////
 
   const $pokeModal = $('<div>').attr('id', 'pokeModal')
   $('#pokemonForm').append($pokeModal)
@@ -125,41 +125,41 @@ $(() => {
 
   })
 
-  ////////////////Journey Modal////////////////////
+  ////////////////POKEMON JOURNEY////////////////////
 
-  const $openModalJourney = $('#openJourneyModal')
+  const $openJourney = $('#openJourney')
   const $modalJourney = $('#aboutJourneyText')
-  const $closeModalJourney = $('#closeJourneyModal')
+  const $closeJourney = $('#closeJourney')
 
-  const openJourneyModal = () => {
+  const openJourney = () => {
     $modalJourney.css('display', 'flex')
   }
 
-  const closeJourneyModal = () => {
+  const closeJourney = () => {
     $modalJourney.css('display', 'none')
   }
 
-  $openModalJourney.on('click', openJourneyModal)
-  $closeModalJourney.on('click', closeJourneyModal)
+  $openJourney.on('click', openJourney)
+  $closeJourney.on('click', closeJourney)
 
 
 
-  ////////////////Tools Modal////////////////////
+  ////////////////POKEMON TOOLS////////////////////
 
-  const $openModalTools = $('#openToolsModal')
+  const $openTools = $('#openTools')
   const $modalTools = $('#aboutToolsText')
-  const $closeModalTools = $('#closeToolsModal')
+  const $closeTools = $('#closeTools')
 
-  const openToolsModal = () => {
+  const openTools = () => {
     $modalTools.css('display', 'flex')
   }
 
-  const closeToolsModal = () => {
+  const closeTools = () => {
     $modalTools.css('display', 'none')
   }
 
-  $openModalTools.on('click', openToolsModal)
-  $closeModalTools.on('click', closeToolsModal)
+  $openTools.on('click', openTools)
+  $closeTools.on('click', closeTools)
 
 
 
@@ -223,7 +223,6 @@ $(() => {
   $bulbaModalText.append($chooseBulba)
 
 
-
   const $openModalBulba = $('#openBulbaModal')
   const $modalBulba = $('#bulbaModal')
   const $closeModalBulba = $('#closeBulbaModal')
@@ -238,6 +237,11 @@ $(() => {
 
   $openModalBulba.on('click', openBulbaModal)
   $closeModalBulba.on('click', closeBulbaModal)
+
+
+  $('#chooseBulba').on('click', () => {
+    $('#chooseBulba').append('<embed id="bulbaAudio" type="audio/mpeg" src="audio/bulbasaur.mp3" autostart="true" hidden="true"></embed>')
+  })
 
 
 
@@ -352,6 +356,11 @@ $(() => {
   $closeModalChar.on('click', closeCharModal)
 
 
+  $('#chooseChar').on('click', () => {
+    $('#chooseChar').append('<embed id="charAudio" type="audio/mpeg" src="audio/charmander.mp3" autostart="true" hidden="true"></embed>')
+  })
+
+
 
   $.ajax({
 
@@ -460,6 +469,11 @@ $(() => {
 
   $openModalSquirt.on('click', openSquirtModal)
   $closeModalSquirt.on('click', closeSquirtModal)
+
+
+  $('#chooseSquirt').on('click', () => {
+    $('#chooseSquirt').append('<embed id="squirtAudio" type="audio/mp3" src="audio/squirtle.mp3" autostart="true" hidden="true"></embed>')
+  })
 
 
 
