@@ -524,4 +524,13 @@ $(() => {
   $openLuckSquirt.on('click', openLuckModal)
   $closeModalLuck.on('click', closeLuckModal)
 
+
+
+  ////////////////Pikachu Popup////////////////////
+
+  $('#pikaTail').on('click', () => {
+    $('#pikaDiv').css('display', 'block')
+  })
+
+
 })

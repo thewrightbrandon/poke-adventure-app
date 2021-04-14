@@ -432,6 +432,34 @@ td, tr {
 }
 
 
+
+/* //////////////////Pika Popup/////////////////////////// */
+
+
+
+#pikaTail {
+  width: 100px;
+  height: 50px;
+}
+
+#pikaTail:hover {
+  opacity: .8;
+}
+
+#pikaDiv {
+  display: none;
+}
+
+#pikaPop {
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+}
+
+
+
 /* //////////////////Media Queries/////////////////////////// */
 
 @media screen and (min-width:1024px) {
@@ -498,4 +526,81 @@ td, tr {
   100% {
     transform: translateX(0%);
     transform-origin: 50% 50%;  }
+}
+
+.bounce-in-bottom {
+    animation: bounce-in-bottom 1.8s;
+}
+
+@keyframes bounce-in-bottom {
+  0% {
+    transform: translateY(500px);
+    animation-timing-function: ease-in;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    transform: translateY(65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+  .bounce-out-bottom {
+	   animation: bounce-out-bottom 1.5s both;
+  }
+
+  @keyframes bounce-out-bottom {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  5% {
+    transform: translateY(30px);
+    animation-timing-function: ease-in;
+  }
+  15% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  25% {
+    transform: translateY(38px);
+    animation-timing-function: ease-in;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  52% {
+    transform: translateY(75px);
+    animation-timing-function: ease-in;
+  }
+  70% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(800px);
+  }
 }
