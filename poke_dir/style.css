@@ -186,7 +186,7 @@ ul > p {
 
 #pokemonForm {
   text-align: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 #inputBox {
@@ -218,11 +218,9 @@ ul > p {
   background-color: crimson;
   color: ghostwhite;
   text-align: center;
-  margin: auto;
-  margin-top: 40px;
+  margin: 40px auto 0;
   padding: 20px 0;
   width: 80%;
-  min-width: 400px;
 	border: 3px solid black;
   border-radius: 10px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
@@ -273,10 +271,10 @@ ul > p {
   margin: auto;
   margin-top: 40px;
   padding: 20px 0;
-  width: 525px;
   height: 475px;
 	border: 3px solid black;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  width: 60%;
 }
 
 #bulbaInfo, #charInfo, #squirtInfo {
@@ -411,7 +409,6 @@ td, tr {
   border-radius: 20px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  min-width: 700px;
 }
 
 #luckText {
@@ -505,12 +502,139 @@ td, tr {
     width: 250px;
   }
 
+  #bulbaModalText, #charModalText, #squirtModalText {
+    max-width: 720px;
+  }
+
+
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:900px) {
+
+  .toolTipText > p {
+    font-size: 10px;
+  }
 
   .pokeballs > img {
-    width: 100px;
+    width: 125px;
+  }
+
+
+  #inputBox {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+
+  #submitBtn {
+    font-size: 15px;
+  }
+
+  #pokeModal {
+    width: 52%;
+    margin: 0 auto;
+  }
+
+  #pokeModalText {
+    margin-right: 0;
+    margin: 40px auto;
+    min-width: 300px;
+  }
+
+  #pokeInfo {
+    font-size: 10px;
+  }
+
+  #pokeImg {
+    width: 225px;
+    height: 225px;
+  }
+
+  #pokedex {
+    font-size: 25px;
+  }
+
+
+  .aboutImg > img {
+    width: 75%;
+    height: 25%;
+  }
+
+  .journeyImg > img {
+    width: 75%;
+    height: 25%;
+  }
+
+  .toolsImg > img {
+    width: 75%;
+    height: 25%;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  li {
+    font-size: 12px;
+  }
+
+  ul > p {
+    font-size: 12px;
+  }
+
+
+  #chooseStarterText {
+    font-size: 45px;
+  }
+
+  #bulbaModalText, #charModalText, #squirtModalText {
+    min-width: 400px;
+    height: 400px;
+  }
+
+  #bulbaInfo, #charInfo, #squirtInfo {
+    font-size: 12px;
+  }
+
+  #closeBulbaModal, #closeCharModal, #closeSquirtModal {
+    font-size: 10px;
+  }
+
+  #chooseBulba, #chooseChar, #chooseSquirt {
+    font-size: 18px;
+  }
+
+  .pokeImg {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  #luckMain > p {
+    font-size: 10px;
+  }
+
+  #luckModalText {
+    width: 70%;
+    height: auto;
+  }
+
+  #luckImg {
+    width: 40%;
+    min-width: 225px;
+  }
+
+  #closeLuckModal {
+    font-size: 12px;
+  }
+
+  #luckLink {
+    font-size: 12px;
+    width: 30%;
+  }
+
+  #oakPic2 {
+    width: 40%;
+    min-width: 135px;
   }
 
 }
