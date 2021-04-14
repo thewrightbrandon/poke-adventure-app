@@ -529,8 +529,9 @@ $(() => {
   ////////////////Pikachu Popup////////////////////
 
   $('#pikaTail').on('click', () => {
-    $('#pikaDiv').css('display', 'block')
+    $('#pikaDiv').toggle('pikaBoo')
   })
+
 
 
 })

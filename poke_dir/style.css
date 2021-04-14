@@ -359,7 +359,6 @@ td, tr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5%
 }
 
 #luckMain > p {
@@ -409,6 +408,7 @@ td, tr {
 
 #closeLuckModal:hover {
   text-decoration: underline;
+  margin-bot
 }
 
 #luckGo {
@@ -448,6 +448,10 @@ td, tr {
 
 #pikaDiv {
   display: none;
+}
+
+.pikaBoo {
+  display: block;
 }
 
 #pikaPop {
@@ -533,11 +537,7 @@ td, tr {
 }
 
 @keyframes bounce-in-bottom {
-  0% {
-    transform: translateY(500px);
-    animation-timing-function: ease-in;
-  }
-  38% {
+  0%, 38% {
     transform: translateY(0);
     animation-timing-function: ease-out;
   }
