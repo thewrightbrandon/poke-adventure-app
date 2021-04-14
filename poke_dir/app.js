@@ -1,8 +1,5 @@
 $(() => {
 
-  // const helloThere = alert('You\'re finally ready to start your Pokemon journey! Let\'s go see Professor Oak to get started!')
-
-
 
 
   ////////////////POKEMON ABOUT////////////////////
@@ -37,48 +34,35 @@ $(() => {
   $pokedex.append($pokedexText)
 
   const $pokeImg = $('<img>').attr('id', 'pokeImg')
-  $pokeModalText.append($pokeImg)
-
   const $pokeInfo = $('<table>').attr('id', 'pokeInfo')
-  $pokeModalText.append($pokeInfo)
+  $pokeModalText.append($pokeImg).append($pokeInfo)
 
   const $pokeRow1 = $('<tr>')
   $pokeInfo.append($pokeRow1)
 
-  const $poke1 = $('<th>').text('MOVES')
-  $pokeRow1.append($poke1)
-  const $poke2 = $('<th>').text('NAME')
-  $pokeRow1.append($poke2)
+  const $poke1 = $('<th>').text('NAME')
+  const $poke2 = $('<th>').text('MOVES')
   const $poke3 = $('<th>').text('TYPE')
-  $pokeRow1.append($poke3)
-  const $poke4 = $('<th>').text('WEIGHT')
-  $pokeRow1.append($poke4)
-  const $poke5 = $('<th>').text('HEIGHT')
-  $pokeRow1.append($poke5)
-  const $poke6 = $('<th>').text('ID#')
-  $pokeRow1.append($poke6)
+  const $poke4 = $('<th>').text('ABILITY')
+  const $poke5 = $('<th>').text('ID#')
+  $pokeRow1.append($poke1).append($poke2).append($poke3).append($poke4).append($poke5)
 
   const $pokeRow2 = $('<tr>')
   $pokeInfo.append($pokeRow2)
 
-  const $pokeMove1 = $('<td>').attr('id', 'pokeMove1')
-  $pokeRow2.append($pokeMove1)
   const $pokeName = $('<td>').attr('id', 'pokeName')
-  $pokeRow2.append($pokeName)
+  const $pokeMove1 = $('<td>').attr('id', 'pokeMove1')
   const $pokeTypes = $('<td>').attr('id', 'pokeTypes')
-  $pokeRow2.append($pokeTypes)
-  const $pokeWeight = $('<td>').attr('id', 'pokeWeight')
-  $pokeRow2.append($pokeWeight)
-  const $pokeHeight = $('<td>').attr('id', 'pokeHeight')
-  $pokeRow2.append($pokeHeight)
+  const $pokeAbility = $('<td>').attr('id', 'pokeAbility')
   const $pokeId = $('<td>').attr('id', 'pokeId')
-  $pokeRow2.append($pokeId)
+  $pokeRow2.append($pokeName).append($pokeMove1).append($pokeTypes).append($pokeAbility).append($pokeId)
 
   const $pokeRow3 = $('<tr>')
   $pokeInfo.append($pokeRow3)
 
+  const $pokeBlank = $('<td>')
   const $pokeMove2 = $('<td>').attr('id', 'pokeMove2')
-  $pokeRow3.append($pokeMove2)
+  $pokeRow3.append($pokeBlank).append($pokeMove2)
 
 
 
@@ -107,9 +91,12 @@ $(() => {
       }
       $('#pokeName').html(data.name)
       $('#pokeId').html(data.id)
-      $('#pokeTypes').html(data.types[0].type.name)
-      $('#pokeWeight').html(data.weight)
-      $('#pokeHeight').html(data.height)
+      if(data.types.length === 2) {
+      $('#pokeTypes').html(data.types[0].type.name + '&' + data.types[1].type.name)
+      } else {
+        $('#pokeTypes').html(data.types[0].type.name)
+      }
+      $('#pokeAbility').html(data.abilities[0].ability.name)
       $('#pokeImg').attr(`src`, `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${$userInput}.png`)
 
     },
@@ -184,30 +171,29 @@ $(() => {
   const $bulbaRow1 = $('<tr>')
   $bulbaInfo.append($bulbaRow1)
 
-  const $bulba1 = $('<th>').text('MOVES')
-  const $bulba2 = $('<th>').text('NAME')
+  const $bulba1 = $('<th>').text('NAME')
+  const $bulba2 = $('<th>').text('MOVES')
   const $bulba3 = $('<th>').text('TYPE')
-  const $bulba4 = $('<th>').text('WEIGHT')
-  const $bulba5 = $('<th>').text('HEIGHT')
-  const $bulba6 = $('<th>').text('ID#')
-  $bulbaRow1.append($bulba1).append($bulba2).append($bulba3).append($bulba4).append($bulba5).append($bulba6)
+  const $bulba4 = $('<th>').text('ABILITY')
+  const $bulba5 = $('<th>').text('ID#')
+  $bulbaRow1.append($bulba1).append($bulba2).append($bulba3).append($bulba4).append($bulba5)
 
   const $bulbaRow2 = $('<tr>')
   $bulbaInfo.append($bulbaRow2)
 
-  const $bulbaMove1 = $('<td>').attr('id', 'bulbaMove1')
   const $bulbaName = $('<td>').attr('id', 'bulbaName')
+  const $bulbaMove1 = $('<td>').attr('id', 'bulbaMove1')
   const $bulbaTypes = $('<td>').attr('id', 'bulbaTypes')
-  const $bulbaWeight = $('<td>').attr('id', 'bulbaWeight')
-  const $bulbaHeight = $('<td>').attr('id', 'bulbaHeight')
+  const $bulbaAbility = $('<td>').attr('id', 'bulbaAbility')
   const $bulbaId = $('<td>').attr('id', 'bulbaId')
-  $bulbaRow2.append($bulbaMove1).append($bulbaName).append($bulbaTypes).append($bulbaWeight).append($bulbaHeight).append($bulbaId)
+  $bulbaRow2.append($bulbaName).append($bulbaMove1).append($bulbaTypes).append($bulbaAbility).append($bulbaId)
 
   const $bulbaRow3 = $('<tr>')
   $bulbaInfo.append($bulbaRow3)
 
+  const $bulbaBlank = $('<td>')
   const $bulbaMove2 = $('<td>').attr('id', 'bulbaMove2')
-  $bulbaRow3.append($bulbaMove2)
+  $bulbaRow3.append($bulbaBlank).append($bulbaMove2)
 
   const $chooseBulba = $('<button>').attr('id', 'chooseBulba').text('I CHOOSE YOU!')
   $bulbaModalText.append($chooseBulba)
@@ -229,15 +215,8 @@ $(() => {
   $closeModalBulba.on('click', closeBulbaModal)
 
 
-  // $('#chooseBulba').on('click', () => {
-  //
-  // })
-
-
 
   $.ajax({
-
-
 
   url: "https://pokeapi.co/api/v2/pokemon/bulbasaur"
 
@@ -255,8 +234,7 @@ $(() => {
     $('#bulbaName').html(data.name)
     $('#bulbaId').html(data.id)
     $('#bulbaTypes').html(data.types[0].type.name)
-    $('#bulbaWeight').html(data.weight)
-    $('#bulbaHeight').html(data.height)
+    $('#bulbaAbility').html(data.abilities[0].ability.name)
 
   },
 
@@ -288,30 +266,29 @@ $(() => {
   const $charRow1 = $('<tr>')
   $charInfo.append($charRow1)
 
-  const $char1 = $('<th>').text('MOVES')
-  const $char2 = $('<th>').text('NAME')
+  const $char1 = $('<th>').text('NAME')
+  const $char2 = $('<th>').text('MOVES')
   const $char3 = $('<th>').text('TYPE')
-  const $char4 = $('<th>').text('WEIGHT')
-  const $char5 = $('<th>').text('HEIGHT')
-  const $char6 = $('<th>').text('ID#')
-  $charRow1.append($char1).append($char2).append($char3).append($char4).append($char5).append($char6)
+  const $char4 = $('<th>').text('ABILITY')
+  const $char5 = $('<th>').text('ID#')
+  $charRow1.append($char1).append($char2).append($char3).append($char4).append($char5)
 
   const $charRow2 = $('<tr>')
   $charInfo.append($charRow2)
 
-  const $charMove1 = $('<td>').attr('id', 'charMove1')
   const $charName = $('<td>').attr('id', 'charName')
+  const $charMove1 = $('<td>').attr('id', 'charMove1')
   const $charTypes = $('<td>').attr('id', 'charTypes')
-  const $charWeight = $('<td>').attr('id', 'charWeight')
-  const $charHeight = $('<td>').attr('id', 'charHeight')
+  const $charAbility = $('<td>').attr('id', 'charAbility')
   const $charId = $('<td>').attr('id', 'charId')
-  $charRow2.append($charMove1).append($charName).append($charTypes).append($charWeight).append($charHeight).append($charId)
+  $charRow2.append($charName).append($charMove1).append($charTypes).append($charAbility).append($charId)
 
   const $charRow3 = $('<tr>')
   $charInfo.append($charRow3)
 
+  const $charBlank = $('<td>')
   const $charMove2 = $('<td>').attr('id', 'charMove2')
-  $charRow3.append($charMove2)
+  $charRow3.append($charBlank).append($charMove2)
 
   const $chooseChar = $('<button>').attr('id', 'chooseChar').text('I CHOOSE YOU!')
   $charModalText.append($chooseChar)
@@ -333,11 +310,6 @@ $(() => {
   $closeModalChar.on('click', closeCharModal)
 
 
-  // $('#chooseChar').on('click', () => {
-  //
-  // })
-
-
 
   $.ajax({
 
@@ -357,8 +329,7 @@ $(() => {
       $('#charName').html(data.name)
       $('#charId').html(data.id)
       $('#charTypes').html(data.types[0].type.name)
-      $('#charWeight').html(data.weight)
-      $('#charHeight').html(data.height)
+      $('#charAbility').html(data.abilities[0].ability.name)
 
   },
 
@@ -391,30 +362,29 @@ $(() => {
   const $squirtRow1 = $('<tr>')
   $squirtInfo.append($squirtRow1)
 
-  const $squirt1 = $('<th>').text('MOVES')
-  const $squirt2 = $('<th>').text('NAME')
+  const $squirt1 = $('<th>').text('NAME')
+  const $squirt2 = $('<th>').text('MOVES')
   const $squirt3 = $('<th>').text('TYPE')
-  const $squirt4 = $('<th>').text('WEIGHT')
-  const $squirt5 = $('<th>').text('HEIGHT')
-  const $squirt6 = $('<th>').text('ID#')
-  $squirtRow1.append($squirt1).append($squirt2).append($squirt3).append($squirt4).append($squirt5).append($squirt6)
+  const $squirt4 = $('<th>').text('ABILITY')
+  const $squirt5 = $('<th>').text('ID#')
+  $squirtRow1.append($squirt1).append($squirt2).append($squirt3).append($squirt4).append($squirt5)
 
   const $squirtRow2 = $('<tr>')
   $squirtInfo.append($squirtRow2)
 
-  const $squirtMove1 = $('<td>').attr('id', 'squirtMove1')
   const $squirtName = $('<td>').attr('id', 'squirtName')
+  const $squirtMove1 = $('<td>').attr('id', 'squirtMove1')
   const $squirtTypes = $('<td>').attr('id', 'squirtTypes')
-  const $squirtWeight = $('<td>').attr('id', 'squirtWeight')
-  const $squirtHeight = $('<td>').attr('id', 'squirtHeight')
+  const $squirtAbility = $('<td>').attr('id', 'squirtAbility')
   const $squirtId = $('<td>').attr('id', 'squirtId')
-  $squirtRow2.append($squirtMove1).append($squirtName).append($squirtTypes).append($squirtWeight).append($squirtHeight).append($squirtId)
+  $squirtRow2.append($squirtName).append($squirtMove1).append($squirtTypes).append($squirtAbility).append($squirtId)
 
   const $squirtRow3 = $('<tr>')
   $squirtInfo.append($squirtRow3)
 
+  const $squirtBlank = $('<td>')
   const $squirtMove2 = $('<td>').attr('id', 'squirtMove2')
-  $squirtRow3.append($squirtMove2)
+  $squirtRow3.append($squirtBlank).append($squirtMove2)
 
   const $chooseSquirt = $('<button>').attr('id', 'chooseSquirt').text('I CHOOSE YOU!')
   $squirtModalText.append($chooseSquirt)
@@ -436,11 +406,6 @@ $(() => {
   $closeModalSquirt.on('click', closeSquirtModal)
 
 
-  // $('#chooseSquirt').on('click', () => {
-  //
-  // })
-
-
 
   $.ajax({
 
@@ -460,8 +425,7 @@ $(() => {
       $('#squirtName').html(data.name)
       $('#squirtId').html(data.id)
       $('#squirtTypes').html(data.types[0].type.name)
-      $('#squirtWeight').html(data.weight)
-      $('#squirtHeight').html(data.height)
+      $('#squirtAbility').html(data.abilities[0].ability.name)
 
     },
 
@@ -492,7 +456,6 @@ $(() => {
   const $oakImg = $('<img>').attr('src', 'https://i.imgur.com/wyX51xK.png').attr('id', 'oakPic2')
   $luckModalText.append($luckMain)
   $luckMain.append($luckText).append($oakImg)
-
 
   const $luckImg = $('<img>').attr('src', 'https://i.imgur.com/uMnKjfx.jpg').attr('id', 'luckImg')
   $luckModalText.append($luckImg)
@@ -531,7 +494,5 @@ $(() => {
   $('#pikaTail').on('click', () => {
     $('#pikaDiv').toggle('pikaBoo')
   })
-
-
 
 })
