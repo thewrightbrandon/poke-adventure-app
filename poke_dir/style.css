@@ -653,7 +653,7 @@ td, tr {
 
 /* //////////////////Animations/////////////////////////// */
 
-/* Used https://animista.net/ for help with this animation */
+/* Used https://animista.net/ for help with these animations */
 
 .wobble:hover {
   animation: wobble .8s;
@@ -666,19 +666,19 @@ td, tr {
     transform-origin: 50% 50%;
   }
   15% {
-    transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-35px) rotate(-7deg);
   }
   30% {
-    transform: translateX(15px) rotate(6deg);
+    transform: translateX(18px) rotate(7deg);
   }
   45% {
-    transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-18px) rotate(-4deg);
   }
   60% {
-    transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(12px) rotate(3deg);
   }
   75% {
-    transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1deg);
   }
   100% {
     transform: translateX(0%);
@@ -695,7 +695,7 @@ td, tr {
     animation-timing-function: ease-out;
   }
   55% {
-    transform: translateY(65px);
+    transform: translateY(70px);
     animation-timing-function: ease-in;
   }
   72% {
@@ -703,7 +703,7 @@ td, tr {
     animation-timing-function: ease-out;
   }
   81% {
-    transform: translateY(28px);
+    transform: translateY(32px);
     animation-timing-function: ease-in;
   }
   90% {
@@ -711,7 +711,7 @@ td, tr {
     animation-timing-function: ease-out;
   }
   95% {
-    transform: translateY(8px);
+    transform: translateY(15px);
     animation-timing-function: ease-in;
   }
   100% {

@@ -5,24 +5,31 @@ Start your own [Pokemon Adventure!](https://upbeat-clarke-71de29.netlify.app)
 Welcome to the world of Pokémon! As you make your way through the app it will guide you through everything you need to know about becoming a Pokémon Trainer! Learn about the world and the creatures who inhabit it,  what the road looks like ahead and what you'll need to be successful on your journey! You may even make a new friend!
 
 ## User Stories
-- User should be able to interact with Professor Oak
-- User should be able to click on various buttons to learn about Pokémon
-- User should be able to interact with the Pokédex, inputting an ID number of a Pokémon, and receive information and a picture of that Pokémon
-- User should be able to select one of three Pokéballs and have a Modal pop-up with one of three starters inside
-- User should be able to choose a starter which will pop-up another modal with Professor Oak wishing you luck
-- User should be able to enter the tall grass
-- User should be able to close any window or modal that they have opened
-- User should be able to find a small easter egg hidden somewhere on the page
+- As a User, I want to be able to interact with Professor Oak
+- As a User, I want to click on various buttons to learn about Pokémon
+- As a User, I want to interact with the Pokédex
+- As a User, I want to select one of three Pokéballs
+- As a User, I want to choose a starter
+- As a User, I want to enter the tall grass
+- As a User, I want to be able to close any window I open
+- As a User, I hope there is an easter egg pop-up to find
+
+## API Reference
+[Pokémon API](https://pokeapi.co/api/v2/pokemon/)
 
 ## Technologies Used
 - JavaScript
 - jQuery
-- HTML
-- CSS
+- Ajax
+- HTML5
+- CSS3
 
 ## Tech Breakdown
-
-
+- Used HTML5 to create a boilerplate that connects all technologies to the DOM.
+- Used a combination of HTML5, JS, jQuery to populate the web application.
+- Used JS and jQuery to create events that allow interactivity throughout the web application.
+- Used Ajax to make requests to the Pokémon API.
+- Used CSS3 to style the web page and assist with responsive design.
 
 ## Unsolved Problems / Future Updates
 - Had trouble adding audio clips with jQuery / event listener.  
