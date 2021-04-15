@@ -2,7 +2,7 @@ $(() => {
 
 
 
-  ////////////////POKEMON ABOUT////////////////////
+  //////////////// POKEMON ABOUT ////////////////////
 
   const $openAbout = $('#openAbout')
   const $modalAbout = $('#aboutPokemonText')
@@ -21,7 +21,7 @@ $(() => {
 
 
 
-  ////////////////POKEDEX/INPUT////////////////////
+  //////////////// POKEDEX / INPUT ////////////////////
 
   const $pokeModal = $('<div>').attr('id', 'pokeModal')
   $('#pokemonForm').append($pokeModal)
@@ -69,7 +69,6 @@ $(() => {
   $('form').on('submit', (event) => {
 
     event.preventDefault()
-    $('input').empty()
 
     const $userInput = $('input[type="text"]').val() || 6
 
@@ -114,7 +113,7 @@ $(() => {
 
 
 
-  ////////////////POKEMON JOURNEY////////////////////
+  //////////////// POKEMON JOURNEY ////////////////////
 
   const $openJourney = $('#openJourney')
   const $modalJourney = $('#aboutJourneyText')
@@ -133,7 +132,7 @@ $(() => {
 
 
 
-  ////////////////POKEMON TOOLS////////////////////
+  //////////////// POKEMON TOOLS ////////////////////
 
   const $openTools = $('#openTools')
   const $modalTools = $('#aboutToolsText')
@@ -152,7 +151,7 @@ $(() => {
 
 
 
-  ////////////////Bulbasaur Modal////////////////////
+  //////////////// Bulbasaur Modal ////////////////////
 
   const $bulbaModal = $('<div>').attr('id', 'bulbaModal')
   $('.container').append($bulbaModal)
@@ -247,7 +246,7 @@ $(() => {
 
 
 
-  ////////////////Charmander Modal////////////////////
+  //////////////// Charmander Modal ////////////////////
 
   const $charModal = $('<div>').attr('id', 'charModal')
   $('.container').append($charModal)
@@ -342,7 +341,7 @@ $(() => {
 
 
 
-  ////////////////Squirtle Modal////////////////////
+  //////////////// Squirtle Modal ////////////////////
 
   const $squirtModal = $('<div>').attr('id', 'squirtModal')
   $('.container').append($squirtModal)
@@ -438,7 +437,7 @@ $(() => {
 
 
 
-////////////////Goodluck Modal////////////////////
+//////////////// Goodluck Modal ////////////////////
 
   const $luckModal = $('<div>').attr('id', 'luckModal')
   $('body').append($luckModal)
@@ -489,7 +488,7 @@ $(() => {
 
 
 
-  ////////////////Pikachu Popup////////////////////
+  //////////////// Pikachu Popup ////////////////////
 
   $('#pikaTail').on('click', () => {
     $('#pikaDiv').toggle('pikaBoo')
