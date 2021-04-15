@@ -39,4 +39,4 @@ Welcome to the world of Pokémon! As you make your way through the app it will g
 - Add another form where user can input a Pokémon type and will return the types that the Pokémon will be strong and weak against.
 
 ## Wireframes
-[Wireframe Sketches PDF](https://github.com/thewrightbrandon/poke-adventure-app/files/6290650/wire-frame-poke-app.pdf)
+![Wireframe Sketches PDF](https://github.com/thewrightbrandon/poke-adventure-app/files/6290650/wire-frame-poke-app.pdf)
