@@ -151,7 +151,7 @@ $(() => {
 
 
 
-  //////////////// Bulbasaur Modal ////////////////////
+  //////////////// BULBASAUR MODAL ////////////////////
 
   const $bulbaModal = $('<div>').attr('id', 'bulbaModal')
   $('.container').append($bulbaModal)
@@ -246,7 +246,7 @@ $(() => {
 
 
 
-  //////////////// Charmander Modal ////////////////////
+  //////////////// CHARMANDER MODAL ////////////////////
 
   const $charModal = $('<div>').attr('id', 'charModal')
   $('.container').append($charModal)
@@ -341,7 +341,7 @@ $(() => {
 
 
 
-  //////////////// Squirtle Modal ////////////////////
+  //////////////// SQUIRTLE MODAL ////////////////////
 
   const $squirtModal = $('<div>').attr('id', 'squirtModal')
   $('.container').append($squirtModal)
@@ -437,7 +437,7 @@ $(() => {
 
 
 
-//////////////// Goodluck Modal ////////////////////
+//////////////// LUCK MODAL ////////////////////
 
   const $luckModal = $('<div>').attr('id', 'luckModal')
   $('body').append($luckModal)
@@ -488,7 +488,7 @@ $(() => {
 
 
 
-  //////////////// Pikachu Popup ////////////////////
+  //////////////// PIKABOO ////////////////////
 
   $('#pikaTail').on('click', () => {
     $('#pikaDiv').toggle('pikaBoo')
